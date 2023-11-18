@@ -311,74 +311,74 @@ footer {
 /* Mobil */
 @media (max-width: 600px) {
     .nav-menu {
-        display: none; /* Skjul hovedmenyen */
-    }
-
-    .button-nav {
-        display: block; /* Vis hamburgerknappen for mobilmeny */
+        display: flex;
     }
     
     .nav {
         justify-content: space-between;
     }
+    
+    .rectangle{
+        margin: 10px;
+    }
 
-    .rectangle h1 {
-        margin: 10px; /* Reduser margin for bedre mobilvisning */
+    h1 {
+        margin: 10px;
     }
 
     .collection {
-        padding: 10px; /* Reduser padding for bedre mobilvisning */
+        padding: 10px;
         margin: 20px;
     }
     
     .signup, .full-collection {
-        padding: 10px 50px; /* Reduser padding for bedre mobilvisning */
+        padding: 10px 50px; 
     }
 
     .move-h1 {
-        top: 120px;
-        left: 120px;
-        font-size: 1.5em; /* Juster plassering og størrelse for bedre mobilvisning */
+        top: 40px;
+        left: 50px;
+        font-size: 1.5em;
     }
 
     .move-p {
-        top: 160px;
-        left: 135px;
-        font-size: 0.8em; /* Juster plassering og størrelse for bedre mobilvisning */
+        top: 90px;
+        left: 55px;
+        font-size: 0.8em;
     }
 
     .raincoatman {
-        margin: 20px; /* Reduser margin for bedre mobilvisning */
+        margin: 20px; 
     }
 
     .about-us {
-        grid-template-columns: 1fr; /* Endre kolonner til én kolonne for mobilvisning */
+        grid-template-columns: 1fr;
         margin: 20px;
     }
 
     .raincoatwmn {
-        margin-left: 20px; /* Reduser margin for bedre mobilvisning */
+        margin-left: 20px;
     }
 
     .products {
-        flex-direction: column; /* Endre til kolonner for bedre mobilvisning */
-        text-align: center; /* Sentrer innhold i produkter */
+        flex-direction: column;
+        text-align: center;
     }
 
     .product img {
-        max-width: 100%; /* Sørg for at bildene ikke er bredere enn beholderen */
+        max-width: 100%;
     }
 
     .add-to-cart, .shop {
-        padding: 5px 20px; /* Reduser padding for bedre mobilvisning */
+        padding: 5px 20px;
     }
 
     .newsletter {
-        margin-bottom: 20px; /* Reduser bunnmargin for bedre mobilvisning */
+        margin-bottom: 20px;
     }
 
     input[type="email"] {
-        width: 100%; /* Bruk hele bredden for inndatafeltet */
+        width: 100%;
     }
 }
 
@@ -420,7 +420,7 @@ footer {
     grid-column: auto / span 12; 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .col-md-6 {
         grid-column: auto / span 6; 
     }

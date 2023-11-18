@@ -71,6 +71,31 @@ a:hover {
     .button-nav {
         display: inline;
     }
+
+    .content-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-woman {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .Help {
+        text-align: left; /* Align text to the left within the Help div */
+    }
+
+    .rectangle {
+        width: 10px;
+        height: 65px;
+        background-color: #d99982;
+        border: none;
+        margin-bottom: 10px; /* Add some spacing between the rectangle and text */
+    }
 }
 
 /* pad */

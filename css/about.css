@@ -8,13 +8,13 @@ body {
 }
 
 .header {
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0,59,74,1));
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     width: 100%;
+    padding: 10px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0,59,74,1));
+    text-align: center;
 }
 
 .nav {
@@ -25,19 +25,19 @@ body {
 }
 
 .nav-menu {
-    list-style: none;
-    padding: 0;
     display: flex;
     align-items: center;
-    color: #fff;
-    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
-    font-size: 1em;
+    top: 30px;
+    left: 40%;
     width: auto;
     height: 100px;
-    font-weight: bold; 
     margin: 0 auto;
-    left: 40%;
-    top: 30px;
+    padding: 0;
+    font-size: 1em;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    list-style: none;
 }
 
 .nav-menu li{
@@ -60,44 +60,75 @@ a:hover {
 /* Mobil */
 @media (max-width: 600px) {
 .nav-menu {
-        margin-right: 10px;
-        font-size: 1em;
+    margin-right: 10px;
+    font-size: 1em;
     }
 
 .button-nav {
-        display: inline;
+    display: inline;
+    }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+    }
+    
+.about,
+.wecare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hiking-friends,
+.worn-shoe {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+    
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
     }
 }
 
 /* pad */
 @media (min-width: 601px) and (max-width: 1024px) {
 .header-logo {
-        font-size: 22px;
+    font-size: 22px;
     }
 
 .nav-menu {
-        font-size: 20px;
+    font-size: 20px;
     }
 }
 
 /* desktop */
 @media (min-width: 1025px) {
 .header {
-        flex-direction: row;
+    flex-direction: row;
     }
 
 .header-logo {
-        font-size: 24px;
+    font-size: 24px;
     }
 
 .nav {
-        flex-direction: row;
-        justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
     }
 
 .nav-menu {
-        margin-right: 20px;
-        font-size: 18px;
+    margin-right: 20px;
+    font-size: 18px;
     }
 }
 
@@ -109,7 +140,7 @@ a:hover {
 @media (min-width: 768px) {
 .col-md-6 {
         grid-column: auto / span 6;
-    }
+     }
 }
 
 
