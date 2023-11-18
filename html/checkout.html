@@ -1,110 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <meta name="description" content="We offer a wide range of styles, colors, and sizes, 
         so you can find the perfect jacket that suits your style and needs. Whether you are out on an adventure, 
         commuting to work, or simply want to be prepared for unexpected rain showers, we have the jacket for you. 
         We take pride in offering high-quality products and exceptional customer service.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Rainy Days | Pushing the comfort zone - Support</title>
+        <title>Rainy Days | Pushing the comfort zone - Checkout</title>
         <link rel="stylesheet" href="/css/checkout.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     </head>
     <body>
         <div id="container-grid" class="col-sm-12 col-md-6 col-lg-4">
             <div id="content-wrap">
                 <header class="header">
-                    <div class="parent">
-                        <img class="img-man" src="/img/philip-graves-7kyvHc3e-HA-unsplash.jpg" alt="Sporty man with caps" />
-                        <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
-                        <nav class="nav">
-                            <ul class="nav-menu">
-                                <li><a href="index.html">HOME</a></li>
-                                <li><a href="collection.html">SHOP</a></li>
-                                <li><a href="about.html">ABOUT</a></li>
-                                <li><a href="contact-us.html">SUPPORT</a></li>
-                                <li><a href="login.html"><button class="button-nav">LOG IN</button></a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+                    <nav class="nav">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="collection.html">SHOP</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact-us.html">SUPPORT</a></li>
+                        </ul>
+                    </nav>
                 <!--Hamburgermeny-->
                 </header>
                 <main>
-                    <section class="Checkout-total">
+                    <div class="rectangle">
                         <h1>Checkout</h1>
-                        <div>
-                            <img src="/img/RainyDays_Jacket1.jpg" alt="Hurricane hunter jacket">
-                            <h2>Hurricane hunter jacket</h2>
-                            <p>£399</p>
-                            <p>Size medium</p>
-                            <P>Total £399</P>
-                            <p>All taxes included</p>
-                            <p>Shipping included</p>
-                        </div>                  
+                    </div>
+                    <section class="container cart">
+                        <img src="/img/RainyDays_Jacket1.jpg" alt="Hurricane hunter jacket">
+                        <div class="text">
+                            <div class="product-info">
+                                <h2>Hurricane hunter jacket</h2>
+                                <p class="size">Size medium</p>
+                            </div>
+                            <div class="price-info">
+                                <p class="total-price">Total £399</p>
+                                <p>All taxes included</p>
+                                <p>Shipping included</p>
+                            </div>
+                        </div>
                     </section>
-                    <p>Quick checkout</p>   
-                        <img src="/img/Paypal-Logo.jpg" alt="Paypal logo"> 
-                    <section>
+
+            <!-- Payment info and shipping -->
+
+                    <section class="checkout-section">
+                        <div class="checkout-content"
+                            <p>Quick checkout</p>   
+                            <img src="/img/Enc5z.jpg" alt="Paypal logo"> 
+                            <p>Or</p>
+                        </div>
                         <h3>Contact information</h3>
                         <form id="contact-form">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
+                            <label class="large-label" for="email">
+                                <input type="email" name="email" placeholder="E-mail" required>
+                            </label>
                         </form>
                         <h3>Shipping address</h3>
                         <form id="shipping-address">
-                            <label for="country">Country</label>
-                            <input type="text" id="country" name="country" required>
-                            <label for="first-name">First name</label>
-                            <input type="text" id="first-name" name="first-name" required>
-                            <label for="last-name">Last name</label>
-                            <input type="text" id="last-name" name="last-name" required>
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="address" required>
-                            <label for="zip">Postal code</label>
-                            <input type="text" id="zip" name="zip" required>
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city" required>
-                            <label for="telephone">Telephone (optional)</label>
-                            <input type="text" id="telephone" name="telephone" optional>
-                            <label for="save-info">Save my information to speed up checkout</label>
-                            <input type="checkbox" id="save-info" name="save-info">
+                            <label class="large-label" for="country">
+                                <input type="text" name="country" placeholder="Country" required>
+                            </label>
+                            <div class="form-column">
+                                <label class="small-label" for="first-name">
+                                    <input type="text" name="first-name" placeholder="First name" required>
+                                </label>
+                                <label class="small-label" for="last-name">
+                                    <input type="text" name="last-name" placeholder="Last name" required>
+                                </label>
+                            </div>
+                            <label class="large-label" for="address">
+                                <input type="text" name="address" placeholder="address" required>
+                            </label>
+                            <div class="form-column">
+                                <label class="small-label" for="zip">
+                                    <input type="text" name="zip" placeholder="Postal code" required>
+                                </label>
+                                <label class="small-label" for="city">
+                                    <input type="text" name="city" placeholder="City" required>
+                                </label>
+                            </div>
+                            <label class="large-label" for="telephone">
+                                <input type="text" name="telephone" placeholder="Telephone" optional>
+                            </label>
+                            <label class="checkbox" for="save-info">
+                                <input type="checkbox" id="save-info" name="save-info">
+                                Save my information to speed up checout
+                            </label>
                         </form>
                         <h3>Discount code</h3>
-                        <form>
-                            <label for="discout">Enter your discount code</label>
-                            <input type="text" id="discount" name="discount">
+                        <div class="form-column">
+                            <label class="medium-label" for="discout">
+                                <input type="text" name="discount" placeholder="Enter your discount code">
+                            </label>
                             <button id="apply-discount">Use</button>
-                        </form>
+                        </div>
                         <h3>Payment</h3>
                         <form id="payment-form">
-                            <label for="credit-card">Credit card</label>
-                            <input type="checkbox" id="credit-card" name="credit-card">
-                            <label for="card-number">Card</label>
-                            <input type="text" id="card-number" name="card-number">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name">
-                            <label for="expiration">MM/YY</label>
-                            <input type="text" id="expiration" name="expiration">
-                            <label for="ccv">CCV</label>
-                            <input type="text" id="ccv" name="ccv">
-                            <label for="paypal">Paypal</label>
-                            <input type="checkbox" id="paypal" name="paypal">
+                            <label class="checkbox-cc" for="credit-card">
+                                <input type="checkbox" id="credit-card" name="credit-card">
+                                Credit card
+                            </label>
+                            <label class="large-label" for="card-number">
+                                <input type="text" name="card-number" placeholder="Card number">
+                            </label>
+                            <label class="large-label" for="cardholder-name">
+                                <input type="text" name="cardholder-name" placeholder="Cardholder name">
+                            </label>
+                            <div class="form-column">
+                                <label class="small-label" for="expiration">
+                                    <input type="text" name="expiration" placeholder="MM/YY">
+                                </label>
+                                <label class="small-label" for="ccv">
+                                    <input type="text" name="ccv" placeholder="CCV">
+                                </label>
+                            </div>
+                            <label class="checkbox-pp" for="paypal">
+                                <input type="checkbox" id="paypal" name="paypal">
+                                Paypal
+                            </label>
                         </form>
-                        <button id="paynow">PAY</button>
+                        <div class="checkout-container">
+                            <a href="checkout-success.html" class="checkout">PAY</a>
+                            </div>
                     </section>
                 </main>
             </div>
             <footer id="footer-pos">
-                <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
-                <p>mail@rainydays.com</p>
-                Copyright &copy; RainyDays 2023
-                <p>Privacy policy</p>
-                <p>Terms and conditions</p>
+                <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="foot-logo"></a>
+                <div class="info">
+                    <div class="social">
+                        <!-- Contact-us-ikon -->
+                        <a href="contact-us.html">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+            
+                        <!-- Facebook-ikon -->
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+            
+                        <!-- Instagram-ikon -->
+                        <a href="https://www.instagram.com">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <ul class="legal-info">
+                        <li class="copyright">Copyright &copy; RainyDays 2023</li>
+                        <li class="privacy"><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="terms"><a href="terms.html">Terms and Conditions</a></li>
+                    </ul>
+                </div>
             </footer>
         </div>
     </body>
 </html> 
-
-<!--validator.w3.org valdidate by direct input.-->

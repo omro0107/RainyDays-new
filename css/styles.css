@@ -1,181 +1,427 @@
-/* tilbakestill stil for lenker */
-a:link, a:visited, a:hover, a:active {
-    text-decoration: none; /* Tar bort standard understrekning ocg stil for linkar */
-}
-
-/* Skaper en grunnleggende struktur for websiden med grid-layout */
 body {
     background-color: #d9d9d9;
-    margin: 0; /* Tar bort standardmarginaler for siden */
-    display: grid; /* Grid-layout for å strukturere siden */
+    margin: 0;
+    padding: 0;
+    display: grid;
     grid-template-areas:
         'header nav'
         'nav content'
         'content footer';
-    grid-template-rows: auto 1fr auto; /* Deler opp sidan i header, innehåll och footer */
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    justify-items: center;
+    max-width: 100%;
 }
 
-/* Stil for header-seksjonen */
 .header {
-    background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(0,59,74,1));
-    /* background-image: url("/img/Logo-RD.png") right no-repeat, url(/img/philip-graves-7kyvHc3e-HA-unsplash.jpg) left no-repeat; */
-    background-blend-mode: multiply;
-    padding: 10px; /* Legger til litt margin for avstand */
-    display: flex; /* Flex-layout for header */
-    flex-direction: column; /* Stabler element vertikalt i header */
-    align-items: center; /* Sentrerer element horisontalt */
-    text-align: center; /* Sentrerer text i header */
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0,59,74,1));
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
-/* Stil for hovedinnholdsseksjonen */
-.content {
-    margin-top: 10rem; /* Legger till øverste marginalen for avstand */
-    margin-bottom: 10rem; /* Legger till nedersta marginalen for avstand */
-    display: block; /* Viser innholdet som blokk (et under det andre) */
-}
-
-/* Stil for navigeringsseksjonen */
 .nav {
-    display: flex; /* brukerer flex-layout for navigasjonen */
-    flex-direction: column; /* Stabler navigeringsobjekt vertikalt */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
 }
 
-/* Stil for navigationsmeny */
 .nav-menu {
-    list-style: none; /* Tar bort standard listepunkter */
-    padding: 0; /* Tar bort standard listemarginal */
-    margin: 0; /* Tar bort standard listemarginal */
-    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-size: 1em;
+    width: auto;
+    height: 100px;
+    font-weight: bold; 
+    margin: 0 auto;
+    left: 40%;
+    top: 30px;
 }
 
-/* Media Queries for responsiv design */
-/* Mobilstiler */
+.nav-menu li{
+    margin-right: 30px;
+}
+
+a:link, 
+a:visited, 
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #d99982;
+}
+
+.img-logo {
+    max-width: 400px; 
+    height: auto; 
+    background-blend-mode: normal;
+    padding: 40px;
+}
+
+
+.button-nav {
+    background-color: #d99982;
+    color: #fff; 
+    font-size: 16px; 
+    border-radius: 15px; 
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+
+.button-nav:hover {
+    background-color: #fff;
+    color: #003b4a;
+}
+
+/* Main section */
+
+.new-arrivals {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.raincoatman {
+    max-width: 100%;
+    height: auto;
+    margin: 100px;
+}
+
+.move-h1 {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-size: 2em;
+}
+
+.move-p {
+    position: absolute;
+    top: 270px;
+    left: 215px;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-size: 1em;
+}
+
+.raincoatwmn {
+    max-width: 50%;
+    height: auto;
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+h2, h3 {
+    text-align: center;
+    padding: 20px;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+p {
+    font-size: 1em;
+    font-family: 'open sans', 'veranda', sans-serif;
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    width: 10px;
+    height: 65px;
+    background-color: #d99982;
+    border: none;
+    margin: 60px auto;
+}
+
+.rectangle h1{
+    display: inline;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin: 20px;
+}
+
+.bestsellers {
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+}
+
+.bestsellers-title {
+    margin-top: 0;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product img {
+    max-width: auto;
+    max-height: 400px;
+    text-align: center;
+}
+
+.add-to-cart, .shop {
+    background-color: #003b4a;
+    color: #fff; 
+    padding: 5px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'open sans', 'veranda', sans serif;
+}
+
+.add-to-cart:hover, .shop:hover {
+    background-color: #d99982;
+}
+
+.collection{
+    background-color: #003b4a;
+    color: #fff !important;
+    font-size: 1em; 
+    border-radius: 15px; 
+    border: none;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+
+.collection:hover{
+    background-color: #d99982;
+    color: #fff;
+}
+
+.full-collection {
+    display: block;
+    margin: 20px auto;
+    text-align: center; 
+}
+
+.newsletter {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+input[type="email"] {
+    width: 500px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    border: none;
+}
+
+.signup, .full-collection{
+    background-color: #003b4a;
+    color: #fff !important;
+    font-size: 1em; 
+    border-radius: 15px; 
+    border: none;
+    display: inline-block;
+    padding: 20px 200px;
+    text-align: center;
+    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup:hover, .full-collection:hover {
+    background-color: #d99982;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer section */
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color: #003b4a; 
+    color: #fff;  
+    padding: 20px;
+    height: fit-content;
+}
+
+.foot-logo {
+    width: 185px;
+    height: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+    gap: 20px;
+    font-family: 'open sans', 'monteserrat', 'veranda', sans-serif;
+    font-size: 1em;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-info {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.copyright, 
+.privacy, 
+.terms {
+    font-size: 1em;
+}
+
+/* Mediaforespørsler responsiv design */
+/* Mobil */
 @media (max-width: 600px) {
-    /* Stilar for små skjermer (maxbredde: 600px) */
-    .nav-item {
-        margin-right: 10px; /* Legger till marginal for navigeringsobjekt */
-        font-size: 16px; /* Setter tekststørrelsen for mindre skjermer */
+    .nav-menu {
+        display: none; /* Skjul hovedmenyen */
     }
 
     .button-nav {
-        display: inline; /* Viser navigeringsknappen i rad */
+        display: block; /* Vis hamburgerknappen for mobilmeny */
+    }
+    
+    .nav {
+        justify-content: space-between;
+    }
+
+    .rectangle h1 {
+        margin: 10px; /* Reduser margin for bedre mobilvisning */
+    }
+
+    .collection {
+        padding: 10px; /* Reduser padding for bedre mobilvisning */
+        margin: 20px;
+    }
+    
+    .signup, .full-collection {
+        padding: 10px 50px; /* Reduser padding for bedre mobilvisning */
+    }
+
+    .move-h1 {
+        top: 120px;
+        left: 120px;
+        font-size: 1.5em; /* Juster plassering og størrelse for bedre mobilvisning */
+    }
+
+    .move-p {
+        top: 160px;
+        left: 135px;
+        font-size: 0.8em; /* Juster plassering og størrelse for bedre mobilvisning */
+    }
+
+    .raincoatman {
+        margin: 20px; /* Reduser margin for bedre mobilvisning */
+    }
+
+    .about-us {
+        grid-template-columns: 1fr; /* Endre kolonner til én kolonne for mobilvisning */
+        margin: 20px;
+    }
+
+    .raincoatwmn {
+        margin-left: 20px; /* Reduser margin for bedre mobilvisning */
+    }
+
+    .products {
+        flex-direction: column; /* Endre til kolonner for bedre mobilvisning */
+        text-align: center; /* Sentrer innhold i produkter */
+    }
+
+    .product img {
+        max-width: 100%; /* Sørg for at bildene ikke er bredere enn beholderen */
+    }
+
+    .add-to-cart, .shop {
+        padding: 5px 20px; /* Reduser padding for bedre mobilvisning */
+    }
+
+    .newsletter {
+        margin-bottom: 20px; /* Reduser bunnmargin for bedre mobilvisning */
+    }
+
+    input[type="email"] {
+        width: 100%; /* Bruk hele bredden for inndatafeltet */
     }
 }
 
-/* Surfebrettstiler */
+/* pad */
 @media (min-width: 601px) and (max-width: 1024px) {
-    /* Stiler for surfebrett (minimumsbredde: 601px och maxbredde: 1024px) */
     .header-logo {
-        font-size: 22px; /* Justerer tekststørrelsen for surfebrett */
+        font-size: 22px;
     }
 
-    .nav-item {
-        font-size: 20px; /* Justerer tekststørrelsen for surfebrett */
+    .nav-menu {
+        font-size: 20px; 
     }
 }
 
 /* desktop */
 @media (min-width: 1025px) {
-    /* Stiler for større skjermer (minimumsbredde: 1025px) */
+    
     .header {
-        flex-direction: row; /* Viser header-objekt i en rad */
+        flex-direction: row;
     }
 
     .header-logo {
-        font-size: 24px; /* Tekststørrelse fpor større skjermer */
+        font-size: 24px; 
     }
 
     .nav {
-        flex-direction: row; /* Viser navigeringsobjekt i en rad */
-        justify-content: space-between; /* Legger til mellomrom mellom navigeringsobjekt */
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .nav-item {
-        font-size: 18px; /* Tekststørrelse for større skjermer */
-        margin-right: 20px; /* Legger til marginal mellom navigeringsobjekt */
+    .nav-menu {
+        font-size: 18px; 
+        margin-right: 20px; 
     }
 }
 
-/* Ytterligere layoutstilar */
+
 .col-sm-12 {
-    grid-column: auto / span 12; /* Stil for en 12-kolonners layout */
+    grid-column: auto / span 12; 
 }
 
 @media (min-width: 768px) {
     .col-md-6 {
-        grid-column: auto / span 6; /* Stil for en 6-kolonners layout på større skjermer */
+        grid-column: auto / span 6; 
     }
 }
-
-/* Stiler for bilder og deres foreldreelement */
-.parent, .img-man, .img-logo {
-    position: relative; /* Setter relativ positionering for bilder och deres foreldreelement */
-    top: 0;
-    left: 0;
-    padding: 20px; /* Legger till marginaler rundt bilder */
-}
-
-.img-man {
-    width: 100%; /* Setter bildebredden til 100% */
-    max-width: 1000px; /* Begrenser den maksimale bildebredden */
-    height: auto; /* Beholder bildets proporsjoner */
-    background-size: contain;
-}
-
-.img-logo {
-    max-width: 400px; /* Begrensar den maksimale bredden på logobilden */
-    height: auto; /* Beholder bildets proporsjoner */
-    background-size: cover;
-}
-
-/* Stiler for en navigasjonsmeny */
-.menu1 {
-    font-family: montserrat; 
-    font-size: 16px; 
-    color: #fff;
-    width: 429px; /* Sätter en fast bredde for menyen */
-    margin: 0 auto; /* Sentrerer menyen horisontalt */
-    height: 70px; /* Setter en fast høyde for menyen */
-    display: inline-flex; /* Viser menyobjektet i en rad */
-    justify-content: normal; /* Sentrerer menyobjektet horisontalt */
-    list-style: none; /* Tar bort standardlistepunkter */
-    margin-top: 48px; /* Legger till øverste marginalen for avstand */
-    font-weight: bold; /* Setter fet stil på teksten */
-}
-
-/* Stiler for navigeringsknapper */
-.button-nav {
-    background-color: #d99982;
-    color: #fff; 
-    font-size: 16px; 
-    border-radius: 15px; /* Legger till avrundade hjørner på knappene */
-}
-
-/* Stiler for rubrikker */
-h1 {
-    font-size: 32px; 
-    font-family: montserrat; 
-    color: #0b0c0d; 
-}
-
-/* Stiler for andre innholdselementer */
-.service-woman {
-    max-width: 400px; 
-    margin-left: 160px; 
-}
-
-.content-contact {
-    font-size: 16px; 
-    font-family: "open sans"; 
-    color: #0b0c0d;
-}
-
-/* Stiler for footer */
-footer {
-    background-color: #003b4a; 
-    color: #fff; 
-    text-align: center; 
-    padding: 0;
-    width: 100%; /* Gjør så footer dekker hele sidens bredde */
-}
-/* VALIDATE jigsaw.w3.org */
