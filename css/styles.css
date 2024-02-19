@@ -2,32 +2,13 @@ body {
     background-color: #d9d9d9;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-areas:
-        'header nav'
-        'nav content'
-        'content footer';
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    justify-items: center;
-    max-width: 100%;
 }
 
 .header {
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0,59,74,1));
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     width: 100%;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
 }
 
 .nav-menu {
@@ -50,6 +31,10 @@ body {
     margin-right: 30px;
 }
 
+ul{
+    list-style: none;
+}
+
 a:link, 
 a:visited, 
 a:active {
@@ -68,68 +53,51 @@ a:hover {
     padding: 40px;
 }
 
-
-.button-nav {
-    background-color: #d99982;
-    color: #fff; 
-    font-size: 16px; 
-    border-radius: 15px; 
-    border: none;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
-    font-weight: bold;
-    transition-duration: 0.4s;
-}
-
-.button-nav:hover {
-    background-color: #fff;
-    color: #003b4a;
-}
-
 /* Main section */
 
-.new-arrivals {
+.new-arrivals, .image-container {
     position: relative;
 }
 
 .image-container {
-    position: relative;
+    display: flex;
+    padding: 2rem;
 }
 
 .raincoatman {
     max-width: 100%;
-    height: auto;
-    margin: 100px;
 }
 
 .move-h1 {
     position: absolute;
-    top: 200px;
-    left: 200px;
+    top: 100px;
+    left: 100px;
     font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .move-p {
     position: absolute;
-    top: 270px;
-    left: 215px;
+    top: 180px;
+    left: 100px;
     font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .raincoatwmn {
     max-width: 50%;
-    height: auto;
-    margin-left: 60px;
+    margin-left: 2rem;
     margin-right: 0;
 }
 
 .about-us {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
 }
 
 h2, h3 {
@@ -141,7 +109,7 @@ h2, h3 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 1rem;
     font-family: 'open sans', 'veranda', sans-serif;
 }
 
@@ -152,7 +120,7 @@ p {
     height: 65px;
     background-color: #d99982;
     border: none;
-    margin: 60px auto;
+    margin: 2rem;
 }
 
 .rectangle h1{
@@ -178,7 +146,7 @@ p {
 }
 
 .product img {
-    max-width: auto;
+    max-width: 100%;
     max-height: 400px;
     text-align: center;
 }
@@ -298,7 +266,6 @@ footer {
 .legal-info {
     display: flex;
     gap: 20px;
-    list-style: none;
 }
 
 .copyright, 
@@ -307,121 +274,7 @@ footer {
     font-size: 1em;
 }
 
-/* Mediaforespørsler responsiv design */
-/* Mobil */
 @media (max-width: 600px) {
-    .nav-menu {
-        display: flex;
-    }
-    
-    .nav {
-        justify-content: space-between;
-    }
-    
-    .rectangle{
-        margin: 10px;
-    }
-
-    h1 {
-        margin: 10px;
-    }
-
-    .collection {
-        padding: 10px;
-        margin: 20px;
-    }
-    
-    .signup, .full-collection {
-        padding: 10px 50px; 
-    }
-
-    .move-h1 {
-        top: 40px;
-        left: 50px;
-        font-size: 1.5em;
-    }
-
-    .move-p {
-        top: 90px;
-        left: 55px;
-        font-size: 0.8em;
-    }
-
-    .raincoatman {
-        margin: 20px; 
-    }
-
-    .about-us {
-        grid-template-columns: 1fr;
-        margin: 20px;
-    }
-
-    .raincoatwmn {
-        margin-left: 20px;
-    }
-
-    .products {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .product img {
-        max-width: 100%;
-    }
-
-    .add-to-cart, .shop {
-        padding: 5px 20px;
-    }
-
-    .newsletter {
-        margin-bottom: 20px;
-    }
-
-    input[type="email"] {
-        width: 100%;
-    }
-}
-
-/* pad */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .header-logo {
-        font-size: 22px;
-    }
-
-    .nav-menu {
-        font-size: 20px; 
-    }
-}
-
-/* desktop */
-@media (min-width: 1025px) {
-    
-    .header {
-        flex-direction: row;
-    }
-
-    .header-logo {
-        font-size: 24px; 
-    }
-
-    .nav {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .nav-menu {
-        font-size: 18px; 
-        margin-right: 20px; 
-    }
-}
-
-
-.col-sm-12 {
-    grid-column: auto / span 12; 
-}
-
-@media (min-width: 700px) {
-    .col-md-6 {
-        grid-column: auto / span 6; 
-    }
+    .products, .about-us {
+        flex-direction: column;}
 }
