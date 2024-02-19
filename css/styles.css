@@ -6,7 +6,6 @@ body {
 
 .header {
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0,59,74,1));
-    padding: 10px;
     display: flex;
     width: 100%;
 }
@@ -55,7 +54,7 @@ a:hover {
 
 /* Main section */
 
-.new-arrivals, .image-container {
+.image-container {
     position: relative;
 }
 
@@ -151,7 +150,7 @@ p {
     text-align: center;
 }
 
-.add-to-cart, .shop {
+.add-to-cart {
     background-color: #003b4a;
     color: #fff; 
     padding: 5px 40px;
@@ -161,6 +160,7 @@ p {
     font-weight: bold;
     font-size: 16px;
     font-family: 'open sans', 'veranda', sans serif;
+    margin-bottom: 30px;
 }
 
 .add-to-cart:hover, .shop:hover {
@@ -197,6 +197,7 @@ p {
 }
 
 .newsletter {
+    display: block;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -233,9 +234,7 @@ input[type="email"] {
 /* Footer section */
 
 footer {
-    grid-area: footer;
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
     background-color: #003b4a; 
     color: #fff;  
@@ -274,7 +273,13 @@ footer {
     font-size: 1em;
 }
 
-@media (max-width: 600px) {
-    .products, .about-us {
-        flex-direction: column;}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products, .about-us, footer {
+        flex-direction: column;
+    }
 }
