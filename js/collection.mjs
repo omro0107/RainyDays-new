@@ -1,4 +1,4 @@
-import { API_RAINYDAYS_URL } from "./constants.mjs";
+import { API_RAINYDAYS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/dofetch.mjs";
 
 function createCart() {
@@ -65,8 +65,10 @@ function generateProductHtml(product) {
   addToCartButton.textContent = 'Add to Cart';
   addToCartButton.classList.add('add-to-cart-button');
   addToCartButton.addEventListener('click', () => {
+    Event.preventDefault();
     addToCart(product);
   });
+  console.log(addToCartButton);
 
   const viewProductButton = document.createElement('button');
   viewProductButton.textContent = 'View Product';

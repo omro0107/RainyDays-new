@@ -17,6 +17,13 @@ function renderCheckoutSummary() {
       <p>Quantity: ${item.quantity}</p>
       <p>Price: £${itemTotalPrice.toFixed(2)}</p>
     `;
+    const itemImage = document.createElement('img');
+    itemImage.src = item.image.url;
+    itemImage.alt = item.title;
+    itemImage.classList.add('item-image');
+
+    itemSummary.appendChild(itemImage);
+
     cartSummary.appendChild(itemSummary);
   });
 

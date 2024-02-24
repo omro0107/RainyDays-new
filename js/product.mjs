@@ -1,4 +1,4 @@
-import { API_RAINYDAYS_URL } from "./constants.mjs";
+import { API_RAINYDAYS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/dofetch.mjs";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -34,11 +34,11 @@ function renderProductDetails(product) {
         <p>Base Color: ${product.baseColor}</p>
         <p>Price: ${product.price}</p>
         ${product.onSale ? `<p>Discounted Price: ${product.discountedPrice}</p>` : ''}
-        <button id="add-to-basket">Add to Basket</button>
+        <button id="add-to-cart">Add to Cart</button>
     `;
 
-    const addToBasketButton = document.getElementById('add-to-basket');
-    addToBasketButton.addEventListener('click', () => addToCart(product));
+    const addToCartButton = document.getElementById('add-to-cart');
+    addToCartButton.addEventListener('click', () => addToCart(product));
 }
 
 function getProductIdFromUrl() {
@@ -49,7 +49,7 @@ function getProductIdFromUrl() {
 function addToCart(product) {
     const selectedSize = document.getElementById('size').value;
     if (!selectedSize) {
-      alert('Please select a size before adding to basket.');
+      alert('Please select a size before adding to cart.');
       return;
     }
 
@@ -63,5 +63,5 @@ function addToCart(product) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Product added to basket!');
+    alert('Product added to cart!');
 }

@@ -1,19 +1,19 @@
 /*cart*/
-function renderBasketCount() {
+function renderCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const basketCountElement = document.getElementById('basket-count');
-  basketCountElement.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+  const cartCountElement = document.getElementById('basket-count');
+  cartCountElement.textContent = cart.reduce((total, item) => total + item.quantity, 0);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  renderBasketCount();
+  renderCartCount();
 });
 
 function addToCart(product) {
-  renderBasketCount();
+  renderCartCount();
 }
 
 function removeCartItem(productId) {
-  renderBasketCount();
+  renderCartCount();
 }
 

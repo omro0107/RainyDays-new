@@ -101,11 +101,6 @@ h1 {
     text-align: left;
 }
 
-.checkout-container {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 60px;
-}
 .text {
     font-family: 'Open sans', 'veranda', sans-serif;
     flex: 2;
@@ -128,6 +123,7 @@ h3 {
     grid-template-areas: "checkout" "content";
     justify-items: center;
     gap: 10px;
+    margin-top: 3em;
 }
 
 .checkout-content {
@@ -206,7 +202,7 @@ button#apply-discount:hover {
     align-items: center;
 }
 
-.checkout{
+#checkout-button{
     background-color: #d99982;
     color: #fff !important;
     font-size: 1em; 
@@ -219,9 +215,10 @@ button#apply-discount:hover {
     font-weight: bold;
     transition-duration: 0.4s;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 30px;
 }
 
-.checkout:hover{
+#checkout-button:hover{
     background-color: #003b4a;
     color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -236,7 +233,8 @@ footer {
     align-items: center;
     background-color: #003b4a; 
     color: #fff;  
-    padding: 20px;
+    padding: 1em;
+    margin-top: 3em;
     height: fit-content;
 }
 

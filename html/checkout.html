@@ -17,137 +17,131 @@
         <script type="module" src="/js/checkout.mjs"></script>
     </head>
     <body>
-        <div id="container-grid" class="col-sm-12 col-md-6 col-lg-4">
-            <div id="content-wrap">
-                <header class="header">
-                    <a href="../index.html"><img src="../img/Logo-RD.png" alt="logo" class="img-logo"/></a>
-                    <nav class="nav">
-                        <ul class="nav-menu">
-                            <li><a href="../index.html">HOME</a></li>
-                            <li><a href="../html/collection.html">SHOP</a></li>
-                            <li><a href="../html/about.html">ABOUT</a></li>
-                            <li><a href="../html/contact-us.html">SUPPORT</a></li>
-                        </ul>
-                    </nav>
-                <!--Hamburgermeny-->
-                </header>
-                <main>
-                    <div class="rectangle">
-                        <h1>Checkout</h1>
-                    </div>
-                    <div class="container" id="cart-summary">
-                    </div>
-            <!-- Payment info and shipping -->
+        <header>
+            <a href="../index.html"><img src="../img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../html/collection.html">SHOP</a></li>
+                    <li><a href="../html/about.html">ABOUT</a></li>
+                    <li><a href="../html/contact-us.html">SUPPORT</a></li>
+                </ul>
+            </nav>
+        <!--Hamburgermeny-->
+        </header>
+        <main>
+            <div class="rectangle">
+                <h1>Checkout</h1>
+            </div>
+            <div class="container" id="cart-summary">
+            </div>
+    <!-- Payment info and shipping -->
 
-                    <section class="checkout-section">
-                        <div class="checkout-content"
-                            <p>Quick checkout</p>   
-                            <img src="../img/Enc5z.jpg" alt="Paypal logo"> 
-                            <p>Or</p>
-                        </div>
-                        <h3>Contact information</h3>
-                        <form id="contact-form">
-                            <label class="large-label" for="email">
-                                <input type="email" name="email" placeholder="E-mail" required>
-                            </label>
-                        </form>
-                        <h3>Shipping address</h3>
-                        <form id="shipping-address">
-                            <label class="large-label" for="country">
-                                <input type="text" name="country" placeholder="Country" required>
-                            </label>
-                            <div class="form-column">
-                                <label class="small-label" for="first-name">
-                                    <input type="text" name="first-name" placeholder="First name" required>
-                                </label>
-                                <label class="small-label" for="last-name">
-                                    <input type="text" name="last-name" placeholder="Last name" required>
-                                </label>
-                            </div>
-                            <label class="large-label" for="address">
-                                <input type="text" name="address" placeholder="address" required>
-                            </label>
-                            <div class="form-column">
-                                <label class="small-label" for="zip">
-                                    <input type="text" name="zip" placeholder="Postal code" required>
-                                </label>
-                                <label class="small-label" for="city">
-                                    <input type="text" name="city" placeholder="City" required>
-                                </label>
-                            </div>
-                            <label class="large-label" for="telephone">
-                                <input type="text" name="telephone" placeholder="Telephone" optional>
-                            </label>
-                            <label class="checkbox" for="save-info">
-                                <input type="checkbox" id="save-info" name="save-info">
-                                Save my information to speed up checout
-                            </label>
-                        </form>
-                        <h3>Discount code</h3>
-                        <div class="form-column">
-                            <label class="medium-label" for="discout">
-                                <input type="text" name="discount" placeholder="Enter your discount code">
-                            </label>
-                            <button id="apply-discount">Use</button>
-                        </div>
-                        <h3>Payment</h3>
-                        <form id="payment-form">
-                            <label class="checkbox-cc" for="credit-card">
-                                <input type="checkbox" id="credit-card" name="credit-card">
-                                Credit card
-                            </label>
-                            <label class="large-label" for="card-number">
-                                <input type="text" name="card-number" placeholder="Card number">
-                            </label>
-                            <label class="large-label" for="cardholder-name">
-                                <input type="text" name="cardholder-name" placeholder="Cardholder name">
-                            </label>
-                            <div class="form-column">
-                                <label class="small-label" for="expiration">
-                                    <input type="text" name="expiration" placeholder="MM/YY">
-                                </label>
-                                <label class="small-label" for="ccv">
-                                    <input type="text" name="ccv" placeholder="CCV">
-                                </label>
-                            </div>
-                            <label class="checkbox-pp" for="paypal">
-                                <input type="checkbox" id="paypal" name="paypal">
-                                Paypal
-                            </label>
-                        </form>
-                        <div class="checkout-container">
-                            <a href="../html/checkout-success.html" class="checkout">PAY</a>
-                        </div>
-                        <button id="checkout-button">Complete Purchase</button>
-                    </section>
-                </main>
-            </div> 
-            <footer id="footer-pos">
-                <a href="../index.html"><img src="../img/Logo-RD.png" alt="logo" class="foot-logo"></a>
-                <div class="info">
-                    <div class="social">
-                        <!-- Contact-us-ikon -->
-                        <a href="../html/contact-us.html">
-                            <i class="fa-solid fa-phone"></i>
-                        </a>
-            
-                        <!-- Facebook-ikon -->
-                        <a href="https://www.facebook.com">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-            
-                        <!-- Instagram-ikon -->
-                        <a href="https://www.instagram.com">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                    <ul class="legal-info">
-                        <li class="copyright">Copyright &copy; RainyDays 2023</li>
-                        <li class="privacy"><a href="privacy.html">Privacy Policy</a></li>
-                        <li class="terms"><a href="terms.html">Terms and Conditions</a></li>
-                    </ul>
+            <section class="checkout-section">
+                <div class="checkout-content"
+                    <p>Quick checkout</p>   
+                    <img src="../img/Enc5z.jpg" alt="Paypal logo"> 
+                    <p>Or</p>
                 </div>
-            </footer>
+                <h3>Contact information</h3>
+                <form id="contact-form">
+                    <label class="large-label" for="email">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                    </label>
+                </form>
+                <h3>Shipping address</h3>
+                <form id="shipping-address">
+                    <label class="large-label" for="country">
+                        <input type="text" name="country" placeholder="Country" required>
+                    </label>
+                    <div class="form-column">
+                        <label class="small-label" for="first-name">
+                            <input type="text" name="first-name" placeholder="First name" required>
+                        </label>
+                        <label class="small-label" for="last-name">
+                            <input type="text" name="last-name" placeholder="Last name" required>
+                        </label>
+                    </div>
+                    <label class="large-label" for="address">
+                        <input type="text" name="address" placeholder="address" required>
+                    </label>
+                    <div class="form-column">
+                        <label class="small-label" for="zip">
+                            <input type="text" name="zip" placeholder="Postal code" required>
+                        </label>
+                        <label class="small-label" for="city">
+                            <input type="text" name="city" placeholder="City" required>
+                        </label>
+                    </div>
+                    <label class="large-label" for="telephone">
+                        <input type="text" name="telephone" placeholder="Telephone" optional>
+                    </label>
+                    <label class="checkbox" for="save-info">
+                        <input type="checkbox" id="save-info" name="save-info">
+                        Save my information to speed up checout
+                    </label>
+                </form>
+                <h3>Discount code</h3>
+                <div class="form-column">
+                    <label class="medium-label" for="discout">
+                        <input type="text" name="discount" placeholder="Enter your discount code">
+                    </label>
+                    <button id="apply-discount">Use</button>
+                </div>
+                <h3>Payment</h3>
+                <form id="payment-form">
+                    <label class="checkbox-cc" for="credit-card">
+                        <input type="checkbox" id="credit-card" name="credit-card">
+                        Credit card
+                    </label>
+                    <label class="large-label" for="card-number">
+                        <input type="text" name="card-number" placeholder="Card number">
+                    </label>
+                    <label class="large-label" for="cardholder-name">
+                        <input type="text" name="cardholder-name" placeholder="Cardholder name">
+                    </label>
+                    <div class="form-column">
+                        <label class="small-label" for="expiration">
+                            <input type="text" name="expiration" placeholder="MM/YY">
+                        </label>
+                        <label class="small-label" for="ccv">
+                            <input type="text" name="ccv" placeholder="CCV">
+                        </label>
+                    </div>
+                    <label class="checkbox-pp" for="paypal">
+                        <input type="checkbox" id="paypal" name="paypal">
+                        Paypal
+                    </label>
+                </form>
+                <button id="checkout-button">Complete Purchase</button>
+            </section>
+        </main>
+    </div> 
+    <footer>
+        <a href="../index.html"><img src="../img/Logo-RD.png" alt="logo" class="foot-logo"></a>
+        <div class="info">
+            <div class="social">
+                <!-- Contact-us-ikon -->
+                <a href="../html/contact-us.html">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+    
+                <!-- Facebook-ikon -->
+                <a href="https://www.facebook.com">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+    
+                <!-- Instagram-ikon -->
+                <a href="https://www.instagram.com">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <ul class="legal-info">
+                <li class="copyright">Copyright &copy; RainyDays 2023</li>
+                <li class="privacy"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="terms"><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
         </div>
+    </footer>
     </body>
 </html> 

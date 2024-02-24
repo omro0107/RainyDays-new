@@ -1,4 +1,4 @@
-import { API_RAINYDAYS_URL } from "./constants.mjs";
+import { API_RAINYDAYS_URL } from "./utils/constants.mjs";
 import { doFetch } from "./utils/dofetch.mjs";
 
 let currentIndex = 0;

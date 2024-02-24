@@ -46,17 +46,55 @@ a:hover {
     padding: 20px;
 }
 
-#content-wrap {
-    margin-bottom: 120px;
+/* Main*/
+main {
+    display: flex;
+    justify-content: center;
 }
 
-.grid-container {
-    place-items: center;
-    display: grid;
-    height: 100vh;
-    margin-bottom: 50px;
-    font-family: 'open sans', 'montserrat', 'veranda', sans-serif;
-    text-align: center;
+.summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.purchase-confirmation, .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta {
+    margin: 4vw;
+}
+
+#bought-products-summary {
+    margin: 2vw, 0, 2vw, 0;
+    background-color: #fff;
+}
+
+.product-image {
+    width: 200px;
+    height: auto;
+    margin: 20px;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+}
+  
+.text-details {
+    flex-grow: 1;
+}
+
+.total-cost {
+    margin: 20px;
+    font-size: 2vw;
+}
+
+.staricon {
+    width: 20vw;
 }
 
 h1 {
@@ -85,15 +123,14 @@ h1 {
     color: #fff;
 }
 
+/*Footer*/
+
 footer {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto;
-    grid-area: footer;
-    height: fit-content;
+    display: flex;
     padding: 20px;
     background-color: #003b4a;
     color: #fff;
+    margin-top: 2em;
 }
 
 .foot-logo {
@@ -127,4 +164,3 @@ footer {
 .terms {
     font-size: 1em;
 }
-/* VALIDATE jigsaw.w3.org */
