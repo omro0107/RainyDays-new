@@ -15,7 +15,7 @@ function renderCheckoutSummary() {
     itemSummary.innerHTML = `
       <h3>${item.title}</h3>
       <p>Quantity: ${item.quantity}</p>
-      <p>Price: $${itemTotalPrice.toFixed(2)}</p>
+      <p>Price: £${itemTotalPrice.toFixed(2)}</p>
     `;
     cartSummary.appendChild(itemSummary);
   });
@@ -23,7 +23,7 @@ function renderCheckoutSummary() {
   // Display total price
   const totalElement = document.createElement('div');
   totalElement.classList.add('total');
-  totalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+  totalElement.textContent = `Total: £${totalPrice.toFixed(2)}`;
   cartSummary.appendChild(totalElement);
 }
 

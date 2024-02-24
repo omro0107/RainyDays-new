@@ -24,6 +24,64 @@ function renderCart() {
   });
 }
 
+function generateProductHtml(product) {
+  const productWrapper = document.createElement('div');
+  productWrapper.classList.add('product-wrapper');
+
+  const productContainer = document.createElement('div');
+  productContainer.classList.add('product-container');
+
+  const heading = document.createElement('h3');
+  heading.textContent = product.title;
+
+  const productImage = document.createElement('img');
+  productImage.src = product.image.url;
+  productImage.alt = product.title;
+  productImage.classList.add('product-image');
+
+  const productPriceContainer = document.createElement('div');
+
+  if (product.onSale) {
+    const saleText = document.createElement('div');
+    saleText.textContent = 'On Sale!';
+    saleText.classList.add('sale-text');
+    productContainer.appendChild(saleText);
+  }
+  
+  if (product.discountedPrice < product.price) {
+    const productPrice = document.createElement('div');
+    productPrice.textContent = product.price;
+    productPriceContainer.appendChild(productPrice);
+  }
+ 
+  const productPrice = document.createElement('div');
+  productPrice.textContent = product.onSale ? product.discountedPrice : product.price;
+
+  if (product.onSale) {
+    productPrice.style.color = 'red';
+  }  
+
+  const addToCartButton = document.createElement('button');
+  addToCartButton.textContent = 'Add to Cart';
+  addToCartButton.classList.add('add-to-cart-button');
+  addToCartButton.addEventListener('click', () => {
+    addToCart(product);
+  });
+
+  const viewProductButton = document.createElement('button');
+  viewProductButton.textContent = 'View Product';
+  viewProductButton.classList.add('view-product-button');
+  viewProductButton.addEventListener('click', () => {
+    window.location.href = `../html/product.html?id=${product.id}`;
+  });
+
+  productPriceContainer.append(productPrice);
+  productContainer.append(heading, productImage, productPriceContainer, addToCartButton, viewProductButton);
+  productWrapper.appendChild(productContainer);
+
+  return productWrapper;
+}
+
 
 function addToCart(product) {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -46,41 +104,6 @@ function removeCartItem(productId) {
   renderCart();
 }
 
-function generateProductHtml(product) {
-  const productWrapper = document.createElement('div');
-  productWrapper.classList.add('product-wrapper');
-
-  const productContainer = document.createElement('div');
-  productContainer.classList.add('product-container');
-
-  const heading = document.createElement('h3');
-  heading.textContent = product.title;
-
-  const productImage = document.createElement('img');
-  productImage.src = product.image.url;
-  productImage.alt = product.title;
-  
-  const productPriceContainer = document.createElement('div');
-
-  const productPrice = document.createElement('div');
-  productPrice.textContent = product.price;
-
-  const productDiscountedPrice = document.createElement('div');
-  productDiscountedPrice.textContent = product.discountedPrice;
-
-  const productBuyButton = document.createElement('button');
-  productBuyButton.textContent = 'Buy';
-  productBuyButton.classList.add('product-buy-button');
-  productBuyButton.addEventListener('click', () => {
-    addToCart(product);
-  });
-
-  productPriceContainer.append(productPrice, productDiscountedPrice);
-  productContainer.append(heading, productImage, productPriceContainer, productBuyButton);
-  productWrapper.appendChild(productContainer);
-
-  return productWrapper;
-}
 
 function displayProducts(products) {
   const productsDisplayContainer = document.getElementById('products-display');

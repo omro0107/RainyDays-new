@@ -23,6 +23,19 @@ function addToCart(product) {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+function displayProductsInSlideshow() {
+  const productsDisplayContainer = document.getElementById('products-display');
+  productsDisplayContainer.innerHTML = '';
+  const startIndex = currentIndex * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+  const currentProducts = products.slice(startIndex, endIndex);
+
+  currentProducts.forEach((product) => {
+    const productHtml = generateProductHtml(product);
+    productsDisplayContainer.appendChild(productHtml);
+  });
+}
+
 function generateProductHtml(product) {
   const productWrapper = document.createElement('div');
   productWrapper.classList.add('product-wrapper');
@@ -36,50 +49,51 @@ function generateProductHtml(product) {
   const productImage = document.createElement('img');
   productImage.src = product.image.url;
   productImage.alt = product.title;
+  productImage.classList.add('product-image');
 
   const productPriceContainer = document.createElement('div');
 
+  if (product.onSale) {
+    const saleText = document.createElement('div');
+    saleText.textContent = 'On Sale!';
+    saleText.classList.add('sale-text');
+    productContainer.appendChild(saleText);
+  }
+  
+  if (product.discountedPrice < product.price) {
+    const productPrice = document.createElement('div');
+    productPrice.textContent = product.price;
+    productPriceContainer.appendChild(productPrice);
+  }
+ 
   const productPrice = document.createElement('div');
-  productPrice.textContent = product.price;
+  productPrice.textContent = product.onSale ? product.discountedPrice : product.price;
 
-  const productDiscountedPrice = document.createElement('div');
-  productDiscountedPrice.textContent = product.discountedPrice;
+  if (product.onSale) {
+    productPrice.style.color = 'red';
+  }  
 
-  const productBuyButton = document.createElement('button');
-  productBuyButton.textContent = 'Buy';
-  productBuyButton.classList.add('product-buy-button');
-  productBuyButton.addEventListener('click', () => {
+  const addToCartButton = document.createElement('button');
+  addToCartButton.textContent = 'Add to Cart';
+  addToCartButton.classList.add('add-to-cart-button');
+  addToCartButton.addEventListener('click', () => {
     addToCart(product);
   });
 
-  productPriceContainer.append(productPrice, productDiscountedPrice);
-  productContainer.append(heading, productImage, productPriceContainer, productBuyButton);
+  const viewProductButton = document.createElement('button');
+  viewProductButton.textContent = 'View Product';
+  viewProductButton.classList.add('view-product-button');
+  viewProductButton.addEventListener('click', () => {
+    window.location.href = `../html/product.html?id=${product.id}`;
+  });
+
+  productPriceContainer.append(productPrice);
+  productContainer.append(heading, productImage, productPriceContainer, addToCartButton, viewProductButton);
   productWrapper.appendChild(productContainer);
 
   return productWrapper;
 }
 
-function displayProducts(products) {
-  const productsDisplayContainer = document.getElementById('products-display');
-  console.log(products);
-  products.forEach((product) => {
-    const productHtml = generateProductHtml(product);
-    productsDisplayContainer.appendChild(productHtml);
-  });
-}
-
-function displayProductsInSlideshow() {
-  const productsDisplayContainer = document.getElementById('products-display');
-  productsDisplayContainer.innerHTML = '';
-  const startIndex = currentIndex * productsPerPage;
-  const endIndex = startIndex + productsPerPage;
-  const currentProducts = products.slice(startIndex, endIndex);
-
-  currentProducts.forEach((product) => {
-    const productHtml = generateProductHtml(product);
-    productsDisplayContainer.appendChild(productHtml);
-  });
-}
 
 document.getElementById('prev-btn').addEventListener('click', () => {
   if (currentIndex > 0) {
@@ -94,20 +108,6 @@ document.getElementById('next-btn').addEventListener('click', () => {
     currentIndex++;
     displayProductsInSlideshow();
   }
-});
-
-
-document.querySelectorAll('.product-buy-button').forEach(button => {
-  button.addEventListener('click', (event) => {
-    const productId = event.target.dataset.productId;
-    const product = products.find(product => product.id === productId);
-    if (product) {
-      addToCart(product);
-      console.log('Product added to cart:', product);
-    } else {
-      console.error('Product not found:', productId);
-    }
-  });
 });
 
 
