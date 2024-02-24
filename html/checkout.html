@@ -14,6 +14,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script type="module" src="/js/checkout.mjs"></script>
     </head>
     <body>
         <div id="container-grid" class="col-sm-12 col-md-6 col-lg-4">
@@ -34,21 +35,8 @@
                     <div class="rectangle">
                         <h1>Checkout</h1>
                     </div>
-                    <section class="container cart">
-                        <img src="../img/RainyDays_Jacket1.jpg" alt="Hurricane hunter jacket">
-                        <div class="text">
-                            <div class="product-info">
-                                <h2>Hurricane hunter jacket</h2>
-                                <p class="size">Size medium</p>
-                            </div>
-                            <div class="price-info">
-                                <p class="total-price">Total £399</p>
-                                <p>All taxes included</p>
-                                <p>Shipping included</p>
-                            </div>
-                        </div>
-                    </section>
-
+                    <div class="container" id="cart-summary">
+                    </div>
             <!-- Payment info and shipping -->
 
                     <section class="checkout-section">
@@ -129,10 +117,11 @@
                         </form>
                         <div class="checkout-container">
                             <a href="../html/checkout-success.html" class="checkout">PAY</a>
-                            </div>
+                        </div>
+                        <button id="checkout-button">Complete Purchase</button>
                     </section>
                 </main>
-            </div>
+            </div> 
             <footer id="footer-pos">
                 <a href="../index.html"><img src="../img/Logo-RD.png" alt="logo" class="foot-logo"></a>
                 <div class="info">

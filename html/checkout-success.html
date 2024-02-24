@@ -14,6 +14,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script type="module" src="../js/checkout-success.mjs"></script>
     </head>
     <body>
         <div id="container-grid" class="col-sm-12 col-md-6 col-lg-4">
@@ -33,20 +34,7 @@
                     <img id="staricon" src="../img/staricon.png" alt="teal star">
                     <h1>Your purchase has been completed</h1>
                     <p>We will send you an e-mail with confirmation of the order</p>
-                        <div class="pairs">
-                            <div class="pair">
-                                <p>Total amount</p>
-                                <p>£399.00</p>
-                            </div>
-                            <div class="pair">
-                                <p>Order number</p>
-                                <p>47038</p>
-                            </div>
-                            <div class="pair">
-                                <p>Payment method</p>
-                                <p>Credit card</p>
-                            </div>
-                        </div>
+                        <div id="bought-products-summary"></div>
                     <p>Need help? <a href="../html/contact-us.html">Contact support</a></p>
                     <a href="../html/collection.html" class="collection">Go back to shop</a>
                 </main>

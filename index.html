@@ -12,15 +12,15 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-        <script src="js/index.js"></script>
+        <script type="module" src="js/index.js"></script>
     </head>
     <body>
-        <header class="header">
+        <header>
             <a href="index.html"><img src="img/Logo-RD.png" alt="logo" class="img-logo"/></a>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="/html/collection.html">SHOP</a></li>
+                    <li><a href="../html/collection.html">SHOP</a></li>
                     <li><a href="/html/about.html">ABOUT</a></li>
                     <li><a href="/html/contact-us.html">SUPPORT</a></li>
                 </ul>
@@ -28,55 +28,31 @@
                 <!--Hamburgermeny-->
         </header>
         <main>
-            <div class="image-container">
-                <img class="raincoatman" src="img/Raincoatman.png" alt="Man in red raincoat by the sea at sunset">
-                <h1 class="move-h1">NEW ARRIVALS</h1>
-                <a href="html/collection.html" class="move-p">Shop now</a>
-            </div>
-            <section class="about-us">
-                <img class="raincoatwmn" src="img/florian-weichelt-V_9iws038p0-unsplash-min.jpg" alt="Woman in green raincoat photographing a pond">
-                <div class="about">
-                    <div class="rectangle">
-                    <h2 class="heading">Pushing the comfort zone</h2>
-                    </div>
-                    <p>Our jackets is designed to keep you dry and comfortable whatever the weather. 
-                        With our high quality and durable materials, you can be sure that you are well protected against rain and wind.</p>
-                    <p>Our jackets are made with freedom of movement in mind, so you can enjoy your favorite activities without restrictions. 
-                        We offer a wide range of colors and styles, so you can find the rainwear that suits your personal style.</p>
-                    <a href="html/collection.html" class="collection">See full collection</a>
+            <div class="about">
+                <div class="rectangle">
+                <h1 class="heading">Pushing the comfort zone</h1>
                 </div>
-            </section>
+                <p>Our jackets is designed to keep you dry and comfortable whatever the weather. With our high quality and durable materials, you can be sure that you are well protected against rain and wind.</p>
+                <p>We make our designs with freedom of movement in mind, so you can enjoy your favorite activities without restrictions. 
+                We offer a wide range of colors and styles, so you can find the rainwear that suits your personal style.</p>
+                <img class="raincoatman" src="img/Raincoatman.png" alt="Man in red raincoat by the sea at sunset">
+            </div>
             <section class="bestsellers">
                 <div class="rectangle">
-                    <h3 class="bestsellers-title">Best sellers</h3>
+                    <h2 class="bestsellers-title">Bestsellers</h2>
                 </div>
-                <div class="products">
-                    <div class="product">
-                        <img src="img/RainyDays_Jacket1.jpg" alt="Hurricane hunter jacket">
-                        <p>Hurricane Hunter jacket</p>
-                        <p>£399</p>
-                        <button class="add-to-cart">Add to cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="img/RainyDays_Jacket7.jpg" alt="Teddy brushed fleece isolation jacket">
-                        <p>Teddy brushed fleece isolation jacket</p>
-                        <p>£59</p>
-                        <button class="add-to-cart">Add to cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="img/RainyDays_Jacket4.jpg" alt="Thunderstorm jacket">
-                        <p>Thunderstorm jacket</p>
-                        <p>£149</p>
-                        <button class="add-to-cart">Add to cart</button>
-                    </div>
+                <div class="carousel-container">
+                    <div id="products-display" class="carousel-inner"></div>
+                    <button id="prev-btn" class="carousel-btn">Previous</button>
+                    <button id="next-btn" class="carousel-btn">Next</button>
                 </div>
             </section>
             <a href="html/collection.html" class="collection">See full collection</a>
             <section class="newsletter">
                 <div class="rectangle">
-                    <h3 class="heading">Newsletter</h3>
+                    <h2 class="heading">Newsletter</h2>
                 </div>
-                <p>Sign up to recieve Rainydays newsletter to recieve news, promo and fresh online content before everyone else.</p>
+                <p>Sign up to recieve Rainy Days newsletter to recieve news, promo and fresh online content before everyone else.</p>
                 <form id="contact-form">
                     <label class="large-label" for="email">
                         <input type="email" name="email" placeholder="Your e-mail" autocomplete="on" required>
@@ -85,7 +61,7 @@
                 <button class="signup">Sign up</button>
             </section>
         </main>
-        <footer id="footer-pos">
+        <footer>
             <a href="index.html"><img src="img/Logo-RD.png" alt="logo" class="foot-logo"></a>
             <div class="info">
                 <div class="social">
