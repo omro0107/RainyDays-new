@@ -8,12 +8,3 @@ function renderCartCount() {
 document.addEventListener('DOMContentLoaded', function () {
   renderCartCount();
 });
-
-function addToCart(product) {
-  renderCartCount();
-}
-
-function removeCartItem(productId) {
-  renderCartCount();
-}
-

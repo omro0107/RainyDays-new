@@ -28,23 +28,27 @@
 <!--Hamburgermeny-->
     </header>
     <main> 
-      <div class="rectangle">
-        <h1>Collection</h1>
-      </div>
-      <aside id="shopping-cart">
-        <h2>Shopping Cart</h2>
-        <ul id="cart-items"></ul>
-        <button id="clear-cart">Clear Cart</button>
-        <button id="go-to-checkout">Go to Checkout</button>
-      </aside>
-      <details id="genderFilter">
-        <summary>Sort</summary>
-        <div id="genderFilterButtons">
-          <button class="genderFilterButton" data-gender="male">Mens Jackets</button>
-          <button class="genderFilterButton" data-gender="female">Womens Jackets</button>
-          <button id="resetFilterButton">Show All</button>
+      <div class="subheader">
+        <div class="rectangle">
+          <h1>Collection</h1>
         </div>
-      </details>            
+        <details id="genderFilter">
+          <summary>Sort by gender</summary>
+          <div id="genderFilterButtons">
+            <button class="genderFilterButton" data-gender="male">Mens Jackets</button>
+            <button class="genderFilterButton" data-gender="female">Womens Jackets</button>
+            <button id="resetFilterButton">Show All</button>
+          </div>
+        </details>            
+        <div id="shopping-cart">
+          <h2>Cart</h2>
+          <ul id="cart-items"></ul>
+          <div class="cart-buttons">
+            <button id="clear-cart">Clear Cart</button>
+            <button id="go-to-checkout">Go to Checkout</button>
+          </div>
+        </div>
+      </div>
       <div class="products-container">
         <div id="products-display"></div>
       </div>

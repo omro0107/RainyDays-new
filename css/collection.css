@@ -48,25 +48,80 @@ a:hover {
 
 /* Main section */
 
+.subheader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2vw;
+    justify-content: space-between;
+}
+
+
+#shopping-cart {
+    max-width: 500px;
+    border: #d99982 solid 2px;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 1vw;
+}
+
+#clear-cart,  #go-to-checkout {
+    background-color: #003b4a;
+    color: #fff; 
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'open sans', 'veranda', sans serif;
+    margin-top: 10px;
+    width:  170px;
+}
+
+#clear-cart:hover, #go-to-checkout:hover {
+    background-color: #d99982;
+} 
+
+summary::marker {
+    color: #d99982;
+}
+
+#genderFilterButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.genderFilterButton, #resetFilterButton {
+    background-color: #003b4a;
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.genderFilterButton:hover, #resetFilterButton:hover {
+    background-color: #d99982;
+    color: #fff; 
+    border-radius: 15px;
+}
+
 h1 {
-    text-align: center;
     font-family: 'montserrat', 'open sans', 'veranda', sans-serif;
 }
 
 .rectangle {
     display: flex;
-    align-items: center;
     width: 10px;
     height: 80px;
     background-color: #d99982;
     border: none;
-    margin: 60px auto;
 }
 
 .rectangle h1{
     display: inline;
     white-space: nowrap;
-    vertical-align: middle;
+    align-items: baseline;
     margin: 20px;
 }
 

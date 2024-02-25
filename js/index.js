@@ -73,13 +73,6 @@ function generateProductHtml(product) {
     productPrice.style.color = 'red';
   }  
 
-  const addToCartButton = document.createElement('button');
-  addToCartButton.textContent = 'Add to Cart';
-  addToCartButton.classList.add('add-to-cart-button');
-  addToCartButton.addEventListener('click', () => {
-    addToCart(product);
-  });
-
   const viewProductButton = document.createElement('button');
   viewProductButton.textContent = 'View Product';
   viewProductButton.classList.add('view-product-button');
@@ -88,7 +81,7 @@ function generateProductHtml(product) {
   });
 
   productPriceContainer.append(productPrice);
-  productContainer.append(heading, productImage, productPriceContainer, addToCartButton, viewProductButton);
+  productContainer.append(heading, productImage, productPriceContainer, viewProductButton);
   productWrapper.appendChild(productContainer);
 
   return productWrapper;

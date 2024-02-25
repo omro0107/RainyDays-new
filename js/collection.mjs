@@ -11,7 +11,7 @@ function createCart() {
 function renderCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   const cartItemsList = document.getElementById('cart-items');
-  cartItemsList.innerHTML = ''; // Clear previous items
+  cartItemsList.innerHTML = '';
 
   cartItems.forEach(item => {
     const li = document.createElement('li');
@@ -61,15 +61,6 @@ function generateProductHtml(product) {
     productPrice.style.color = 'red';
   }  
 
-  const addToCartButton = document.createElement('button');
-  addToCartButton.textContent = 'Add to Cart';
-  addToCartButton.classList.add('add-to-cart-button');
-  addToCartButton.addEventListener('click', () => {
-    Event.preventDefault();
-    addToCart(product);
-  });
-  console.log(addToCartButton);
-
   const viewProductButton = document.createElement('button');
   viewProductButton.textContent = 'View Product';
   viewProductButton.classList.add('view-product-button');
@@ -78,25 +69,10 @@ function generateProductHtml(product) {
   });
 
   productPriceContainer.append(productPrice);
-  productContainer.append(heading, productImage, productPriceContainer, addToCartButton, viewProductButton);
+  productContainer.append(heading, productImage, productPriceContainer, viewProductButton);
   productWrapper.appendChild(productContainer);
 
   return productWrapper;
-}
-
-
-function addToCart(product) {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const existingItem = cart.find(item => item.id === product.id);
-
-  if (existingItem) {
-    existingItem.quantity++;
-  } else {
-    cart.push({ ...product, quantity: 1 });
-  }
-
-  localStorage.setItem('cart', JSON.stringify(cart));
-  renderCart();
 }
 
 function removeCartItem(productId) {
@@ -109,7 +85,7 @@ function removeCartItem(productId) {
 
 function displayProducts(products) {
   const productsDisplayContainer = document.getElementById('products-display');
-  productsDisplayContainer.innerHTML = ''; // Clear previous products
+  productsDisplayContainer.innerHTML = ''; 
   products.forEach((product) => {
     const productHtml = generateProductHtml(product);
     productHtml.addEventListener('click', () => {
@@ -144,7 +120,7 @@ async function main() {
   const genderFilterButtons = document.querySelectorAll('.genderFilterButton');
   genderFilterButtons.forEach(button => {
     button.addEventListener('click', function() {
-      const gender = this.dataset.gender; // Get the gender from data-gender attribute
+      const gender = this.dataset.gender; 
       filterProducts(gender);
     });
   });
@@ -161,7 +137,7 @@ async function main() {
 
   const goToCheckoutButton = document.getElementById('go-to-checkout');
   goToCheckoutButton.addEventListener('click', () => {
-    window.location.href = '../html/checkout.html'; // Redirect to checkout page
+    window.location.href = '../html/checkout.html'; 
   });
 }
 
