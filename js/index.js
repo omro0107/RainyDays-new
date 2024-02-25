@@ -77,7 +77,7 @@ function generateProductHtml(product) {
   viewProductButton.textContent = 'View Product';
   viewProductButton.classList.add('view-product-button');
   viewProductButton.addEventListener('click', () => {
-    window.location.href = `../html/product.html?id=${product.id}`;
+    window.location.href = `html/product.html?id=${product.id}`;
   });
 
   productPriceContainer.append(productPrice);
