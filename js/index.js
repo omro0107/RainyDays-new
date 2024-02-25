@@ -105,10 +105,18 @@ document.getElementById('next-btn').addEventListener('click', () => {
 
 
 async function main() {
-  createCart();
-  const responseData = await doFetch(API_RAINYDAYS_URL);
-  products.push(...responseData.data);
-  displayProductsInSlideshow();
+  try {
+    createCart();
+    const responseData = await doFetch(API_RAINYDAYS_URL);
+    if (!responseData || !responseData.data) {
+      throw new Error('Failed to fetch product data from the API');
+    }
+    products.push(...responseData.data);
+    displayProductsInSlideshow();
+  } catch (error) {
+    console.error('An error occurred:', error.message);
+    alert('Oops! Something went wrong while fetching products. Please try again later.');
+  }
 }
 
 main();
