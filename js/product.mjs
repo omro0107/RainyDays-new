@@ -24,7 +24,7 @@ function renderProductDetails(product) {
     const productDetailsContainer = document.getElementById('product-details');
     productDetailsContainer.innerHTML = `
         <h1>${product.title}</h1>
-        <img src="${product.image.url}" alt="${product.image.alt}">
+        <img class=product-image src="${product.image.url}" alt="${product.image.alt}">
         <p>Description: ${product.description}</p>
         <p>Gender: ${product.gender}</p>
         <label for="size">Size:</label>

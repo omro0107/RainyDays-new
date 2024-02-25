@@ -38,4 +38,11 @@ function renderBoughtProductsSummary() {
   totalCostElement.classList.add('total-cost');
   totalCostElement.textContent = `Total Cost: £${totalCost.toFixed(2)}`;
   boughtProductsSummary.appendChild(totalCostElement);
+
+
+  clearCart();
+  }
+
+function clearCart() {
+  localStorage.removeItem('cart');
 }

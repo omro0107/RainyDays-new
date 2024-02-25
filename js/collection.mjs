@@ -15,13 +15,33 @@ function renderCart() {
 
   cartItems.forEach(item => {
     const li = document.createElement('li');
-    li.textContent = `${item.title} - Quantity: ${item.quantity}`;
+    const title = document.createElement('span');
+    title.textContent = `${item.title} - `;
+    const quantityInput = document.createElement('input');
+    quantityInput.type = 'number';
+    quantityInput.value = item.quantity;
+    quantityInput.min = '1'; 
+    quantityInput.addEventListener('change', (event) => updateCartItemQuantity(item.id, event.target.value));
+    
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', () => removeCartItem(item.id));
+
+    li.appendChild(title);
+    li.appendChild(quantityInput);
     li.appendChild(removeButton);
     cartItemsList.appendChild(li);
   });
+}
+
+function updateCartItemQuantity(productId, newQuantity) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const index = cart.findIndex(item => item.id === productId);
+  if (index !== -1) {
+    cart[index].quantity = parseInt(newQuantity);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
 }
 
 function generateProductHtml(product) {
