@@ -179,8 +179,8 @@ p {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 10vw;
-    margin-top: 10vw;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
 }
 
 input[type="email"] {
